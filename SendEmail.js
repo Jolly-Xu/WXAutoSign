@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const OPEN_EMAIL = "1589112546@qq.com";
+const OPEN_EMAIL = "你的邮箱地址";
 
 let transporter = nodemailer.createTransport({
     host: "smtp.qq.com",
@@ -9,7 +9,7 @@ let transporter = nodemailer.createTransport({
     secureConnection: true,
     auth: {
         user: OPEN_EMAIL,
-        pass: "ztoxfctrgqyeidga",
+        pass: "你的qq邮箱",
     },
 });
 
@@ -18,7 +18,7 @@ module.exports=function send(msg) {
     let time = new Date()
     let mailOptions = {
         from: `签到提醒<${OPEN_EMAIL}>`,
-        to: "1589112546@qq.com",
+        to: "需要发送的邮箱",
         subject: msg,
         text: msg + time
     };
