@@ -32,13 +32,13 @@ module.exports = async function Login(login_username, toEmail) {
         userid = rep.data.result.name
         sex = rep.data.result.sex.name
         department_id = rep.data.result.department.id
-        getId();
+         getId();
         console.log(apply_user_id, username, userid, sex, department_id, sid);
     }
     else {
         send("签到失败,请自己抓紧时间签到", toEmail)
     }
-
+    
 }
 
 async function getId() {
